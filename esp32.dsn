@@ -1,4 +1,4 @@
-(pcb "C:\Users\Martin.HOME\Projekte\pcb-esp32\esp32.dsn"
+(pcb "C:\Users\Martin.HOME\Projekte\pcb-esp32-2\esp32.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -24,6 +24,8 @@
       (path pcb 0  110490 -105664  85090 -105664  85090 -64262  110490 -64262
             110490 -105664)
     )
+    (keepout "" (polygon B.Cu 0  100330 -79248  93726 -79248  91948 -68580  101600 -68580
+            100330 -79248))
     (via "Via[0-1]_800:400_um")
     (rule
       (width 250)
@@ -34,36 +36,34 @@
   )
   (placement
     (component "esp32:SD_CTF-11081-P"
-      (place J1 98298 -99822 back 0 (PN Micro_SD_Card_Det))
+      (place J1 97565 -99822 back 0 (PN Micro_SD_Card_Det))
     )
     (component "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B"
-      (place C1 87376 -93980 front 90 (PN 10uF))
+      (place C1 91186 -66548 back 180 (PN 10uF))
     )
     (component Capacitor_SMD:C_0603_1608Metric
-      (place C2 100330 -103886 front 180 (PN 22pF))
+      (place C2 101854 -102870 front 90 (PN 22pF))
     )
     (component Capacitor_SMD:C_0603_1608Metric::1
-      (place C3 103378 -102616 front 270 (PN 22pF))
-    )
-    (component Resistor_SMD:R_0603_1608Metric
-      (place C4 101346 -92964 front 90 (PN 0.1uF))
-      (place R2 86614 -101854 front 90 (PN R))
-      (place R3 97028 -102108 front 270 (PN R))
-      (place R5 108966 -95504 front 90 (PN 5k))
-    )
-    (component Resistor_SMD:R_0603_1608Metric::1
-      (place C5 89916 -92964 front 90 (PN 0.1uF))
-      (place R1 86614 -98552 front 90 (PN R))
-      (place R4 95250 -102108 front 270 (PN R))
+      (place C3 103632 -102870 front 270 (PN 22pF))
     )
     (component "SamacSys_Parts:SOT65P210X110-5N"
-      (place D1 90678 -100584 front 180 (PN "D5V0L4B5S-7"))
+      (place D1 91186 -102870 front 180 (PN "D5V0L4B5S-7"))
     )
     (component "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-      (place JP1 108712 -100838 front 270 (PN "CAN 120"))
+      (place JP1 108712 -101900 front 270 (PN "CAN 120"))
+    )
+    (component Resistor_SMD:R_0603_1608Metric
+      (place R1 88392 -102870 front 90 (PN 10k))
+      (place R4 93980 -102870 front 270 (PN 10k))
+    )
+    (component Resistor_SMD:R_0603_1608Metric::1
+      (place R2 86614 -102870 front 90 (PN 10k))
+      (place R3 95758 -102870 front 270 (PN 10k))
+      (place R5 108966 -94996 front 90 (PN 5k))
     )
     (component Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder
-      (place R6 105918 -101600 front 90 (PN 120))
+      (place R6 105918 -101900 front 90 (PN 120))
     )
     (component "SamacSys_Parts:SOIC127P600X175-14N"
       (place U1 95504 -94996 front 90 (PN "MCP2518FDT-H_SL"))
@@ -72,16 +72,29 @@
       (place U2 105156 -94996 front 270 (PN SN65HVD231))
     )
     (component SamacSys_Parts:XRCGB40M000F4M02R0
-      (place Y1 100330 -101092 front 180 (PN XRCGB40M000F4M02R0))
+      (place Y1 98933 -101092 front 180 (PN XRCGB40M000F4M02R0))
     )
     (component Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical
-      (place J2 86360 -66040 front 0 (PN Conn_01x10_Male))
+      (place J2 86360 -66040 back 0 (PN Conn_01x10_Male))
     )
     (component Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical::1
-      (place J3 109220 -66040 front 0 (PN Conn_01x10_Male))
+      (place J3 109220 -66040 back 0 (PN Conn_01x10_Male))
     )
     (component esp32:ESP32WROVER
       (place IC1 97790 -73660 front 0 (PN "ESP32-WROVER-E_M213EH6464PH3Q0_"))
+    )
+    (component Capacitor_SMD:C_0603_1608Metric::2
+      (place C4 101346 -92776 front 270 (PN 0.1uF))
+    )
+    (component Capacitor_SMD:C_0603_1608Metric::3
+      (place C5 89916 -92776 front 270 (PN 0.1uF))
+      (place C6 86614 -92964 front 90 (PN 100nF))
+    )
+    (component "Package_TO_SOT_SMD:SOT-363_SC-70-6"
+      (place Q1 87484 -96266 front 180 (PN UMH3N))
+    )
+    (component Resistor_SMD:R_0603_1608Metric::2
+      (place R7 86614 -99568 front 90 (PN 10k))
     )
   )
   (library
@@ -163,34 +176,6 @@
       (pin RoundRect[T]Pad_900x950_225.856_um 1 -775 0)
       (pin RoundRect[T]Pad_900x950_225.856_um 2 775 0)
     )
-    (image Resistor_SMD:R_0603_1608Metric
-      (outline (path signal 50  1480 -730  -1480 -730))
-      (outline (path signal 50  1480 730  1480 -730))
-      (outline (path signal 50  -1480 730  1480 730))
-      (outline (path signal 50  -1480 -730  -1480 730))
-      (outline (path signal 120  -237.258 -522.5  237.258 -522.5))
-      (outline (path signal 120  -237.258 522.5  237.258 522.5))
-      (outline (path signal 100  800 -412.5  -800 -412.5))
-      (outline (path signal 100  800 412.5  800 -412.5))
-      (outline (path signal 100  -800 412.5  800 412.5))
-      (outline (path signal 100  -800 -412.5  -800 412.5))
-      (pin RoundRect[T]Pad_800x950_200.761_um 1 -825 0)
-      (pin RoundRect[T]Pad_800x950_200.761_um 2 825 0)
-    )
-    (image Resistor_SMD:R_0603_1608Metric::1
-      (outline (path signal 100  -800 -412.5  -800 412.5))
-      (outline (path signal 100  -800 412.5  800 412.5))
-      (outline (path signal 100  800 412.5  800 -412.5))
-      (outline (path signal 100  800 -412.5  -800 -412.5))
-      (outline (path signal 120  -237.258 522.5  237.258 522.5))
-      (outline (path signal 120  -237.258 -522.5  237.258 -522.5))
-      (outline (path signal 50  -1480 -730  -1480 730))
-      (outline (path signal 50  -1480 730  1480 730))
-      (outline (path signal 50  1480 730  1480 -730))
-      (outline (path signal 50  1480 -730  -1480 -730))
-      (pin RoundRect[T]Pad_800x950_200.761_um 2 825 0)
-      (pin RoundRect[T]Pad_800x950_200.761_um 1 -825 0)
-    )
     (image "SamacSys_Parts:SOT65P210X110-5N"
       (outline (path signal 200  -1500 1100  -500 1100))
       (outline (path signal 200  -150 -1000  -150 1000))
@@ -223,6 +208,34 @@
       (outline (path signal 120  -1400 -300  -1400 300))
       (pin Cust[T]Pad_1000x500_1500x_1000_23_um_CC0G245F0E23G4160D7B77743EECE6E0 1 -650 0)
       (pin Cust[T]Pad_1000x500_1500x_1000_23_um_CDG34BFFGBG13F075DBEG9EE3D2419E9 2 650 0)
+    )
+    (image Resistor_SMD:R_0603_1608Metric
+      (outline (path signal 100  -800 -412.5  -800 412.5))
+      (outline (path signal 100  -800 412.5  800 412.5))
+      (outline (path signal 100  800 412.5  800 -412.5))
+      (outline (path signal 100  800 -412.5  -800 -412.5))
+      (outline (path signal 120  -237.258 522.5  237.258 522.5))
+      (outline (path signal 120  -237.258 -522.5  237.258 -522.5))
+      (outline (path signal 50  -1480 -730  -1480 730))
+      (outline (path signal 50  -1480 730  1480 730))
+      (outline (path signal 50  1480 730  1480 -730))
+      (outline (path signal 50  1480 -730  -1480 -730))
+      (pin RoundRect[T]Pad_800x950_200.761_um 2 825 0)
+      (pin RoundRect[T]Pad_800x950_200.761_um 1 -825 0)
+    )
+    (image Resistor_SMD:R_0603_1608Metric::1
+      (outline (path signal 50  1480 -730  -1480 -730))
+      (outline (path signal 50  1480 730  1480 -730))
+      (outline (path signal 50  -1480 730  1480 730))
+      (outline (path signal 50  -1480 -730  -1480 730))
+      (outline (path signal 120  -237.258 -522.5  237.258 -522.5))
+      (outline (path signal 120  -237.258 522.5  237.258 522.5))
+      (outline (path signal 100  800 -412.5  -800 -412.5))
+      (outline (path signal 100  800 412.5  800 -412.5))
+      (outline (path signal 100  -800 412.5  800 412.5))
+      (outline (path signal 100  -800 -412.5  -800 412.5))
+      (pin RoundRect[T]Pad_800x950_200.761_um 1 -825 0)
+      (pin RoundRect[T]Pad_800x950_200.761_um 2 825 0)
     )
     (image Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder
       (outline (path signal 50  2450 -1120  -2450 -1120))
@@ -424,6 +437,67 @@
       (pin Rect[T]Pad_1330x1330_um (rotate 90) 46 835 2595)
       (pin Rect[T]Pad_1330x1330_um (rotate 90) 47 -1000 2595)
     )
+    (image Capacitor_SMD:C_0603_1608Metric::2
+      (outline (path signal 50  1480 -730  -1480 -730))
+      (outline (path signal 50  1480 730  1480 -730))
+      (outline (path signal 50  -1480 730  1480 730))
+      (outline (path signal 50  -1480 -730  -1480 730))
+      (outline (path signal 120  -140.58 -510  140.58 -510))
+      (outline (path signal 120  -140.58 510  140.58 510))
+      (outline (path signal 100  800 -400  -800 -400))
+      (outline (path signal 100  800 400  800 -400))
+      (outline (path signal 100  -800 400  800 400))
+      (outline (path signal 100  -800 -400  -800 400))
+      (pin RoundRect[T]Pad_900x950_225.856_um 2 775 0)
+      (pin RoundRect[T]Pad_900x950_225.856_um 1 -775 0)
+    )
+    (image Capacitor_SMD:C_0603_1608Metric::3
+      (outline (path signal 100  -800 -400  -800 400))
+      (outline (path signal 100  -800 400  800 400))
+      (outline (path signal 100  800 400  800 -400))
+      (outline (path signal 100  800 -400  -800 -400))
+      (outline (path signal 120  -140.58 510  140.58 510))
+      (outline (path signal 120  -140.58 -510  140.58 -510))
+      (outline (path signal 50  -1480 -730  -1480 730))
+      (outline (path signal 50  -1480 730  1480 730))
+      (outline (path signal 50  1480 730  1480 -730))
+      (outline (path signal 50  1480 -730  -1480 -730))
+      (pin RoundRect[T]Pad_900x950_225.856_um 1 -775 0)
+      (pin RoundRect[T]Pad_900x950_225.856_um 2 775 0)
+    )
+    (image "Package_TO_SOT_SMD:SOT-363_SC-70-6"
+      (outline (path signal 120  700 1160  -1200 1160))
+      (outline (path signal 120  -700 -1160  700 -1160))
+      (outline (path signal 50  1600 -1400  1600 1400))
+      (outline (path signal 50  -1600 1400  -1600 -1400))
+      (outline (path signal 50  -1600 1400  1600 1400))
+      (outline (path signal 100  675 1100  -175 1100))
+      (outline (path signal 100  -675 600  -675 -1100))
+      (outline (path signal 50  -1600 -1400  1600 -1400))
+      (outline (path signal 100  675 1100  675 -1100))
+      (outline (path signal 100  675 -1100  -675 -1100))
+      (outline (path signal 100  -175 1100  -675 600))
+      (pin Rect[T]Pad_650x400_um 1 -950 650)
+      (pin Rect[T]Pad_650x400_um 3 -950 -650)
+      (pin Rect[T]Pad_650x400_um 5 950 0)
+      (pin Rect[T]Pad_650x400_um 2 -950 0)
+      (pin Rect[T]Pad_650x400_um 4 950 -650)
+      (pin Rect[T]Pad_650x400_um 6 950 650)
+    )
+    (image Resistor_SMD:R_0603_1608Metric::2
+      (outline (path signal 100  -800 -412.5  -800 412.5))
+      (outline (path signal 100  -800 412.5  800 412.5))
+      (outline (path signal 100  800 412.5  800 -412.5))
+      (outline (path signal 100  800 -412.5  -800 -412.5))
+      (outline (path signal 120  -237.258 522.5  237.258 522.5))
+      (outline (path signal 120  -237.258 -522.5  237.258 -522.5))
+      (outline (path signal 50  -1480 -730  -1480 730))
+      (outline (path signal 50  -1480 730  1480 730))
+      (outline (path signal 50  1480 730  1480 -730))
+      (outline (path signal 50  1480 -730  -1480 -730))
+      (pin RoundRect[T]Pad_800x950_200.761_um 1 -825 0)
+      (pin RoundRect[T]Pad_800x950_200.761_um 2 825 0)
+    )
     (padstack Oval[A]Pad_1700x1700_um
       (shape (path F.Cu 1700  0 0  0 0))
       (shape (path B.Cu 1700  0 0  0 0))
@@ -520,6 +594,10 @@
       (shape (rect F.Cu -200 -500 200 500))
       (attach off)
     )
+    (padstack Rect[T]Pad_650x400_um
+      (shape (rect F.Cu -325 -200 325 200))
+      (attach off)
+    )
     (padstack Rect[T]Pad_650x1500_um
       (shape (rect F.Cu -325 -750 325 750))
       (attach off)
@@ -560,9 +638,6 @@
     )
   )
   (network
-    (net "Net-(IC1-Pad3)"
-      (pins J2-3 IC1-3)
-    )
     (net "Net-(IC1-Pad4)"
       (pins IC1-4)
     )
@@ -570,22 +645,22 @@
       (pins IC1-5)
     )
     (net "Net-(IC1-Pad6)"
-      (pins J2-4 IC1-6)
+      (pins J2-5 IC1-6)
     )
     (net "Net-(IC1-Pad7)"
-      (pins J2-5 IC1-7)
+      (pins J2-6 IC1-7)
     )
     (net "Net-(IC1-Pad8)"
-      (pins J2-6 IC1-8)
+      (pins J2-7 IC1-8)
     )
     (net "Net-(IC1-Pad9)"
-      (pins J2-7 IC1-9)
+      (pins J2-8 IC1-9)
     )
     (net "Net-(IC1-Pad12)"
-      (pins J2-8 IC1-12)
+      (pins J2-9 IC1-12)
     )
     (net "Net-(IC1-Pad14)"
-      (pins J2-9 IC1-14)
+      (pins J2-10 IC1-14)
     )
     (net "Net-(IC1-Pad17)"
       (pins IC1-17)
@@ -605,9 +680,6 @@
     (net "Net-(IC1-Pad22)"
       (pins IC1-22)
     )
-    (net "Net-(IC1-Pad25)"
-      (pins J3-8 IC1-25)
-    )
     (net "Net-(IC1-Pad26)"
       (pins J3-7 IC1-26)
     )
@@ -626,12 +698,6 @@
     (net "Net-(IC1-Pad33)"
       (pins J3-5 IC1-33)
     )
-    (net "Net-(IC1-Pad34)"
-      (pins J3-4 IC1-34)
-    )
-    (net "Net-(IC1-Pad35)"
-      (pins J3-3 IC1-35)
-    )
     (net "Net-(IC1-Pad36)"
       (pins J3-2 IC1-36)
     )
@@ -645,12 +711,12 @@
       (pins J1-8)
     )
     (net +3V3
-      (pins J1-4 C1-1 C4-1 C5-1 R1-2 R2-2 R3-1 R4-1 U1-14 U2-3 J2-2 IC1-2)
+      (pins J1-4 C1-1 R1-2 R2-2 R3-1 R4-1 U1-14 U2-3 J2-1 IC1-2 C4-1 C5-1 R7-1)
     )
     (net GND
-      (pins J1-6 J1-11 J1-11@1 J1-11@2 J1-11@3 C1-2 C2-1 C3-2 C4-2 C5-2 D1-2 R5-2
-        U1-7 U2-2 J2-1 J3-1 IC1-1 IC1-15 IC1-38 IC1-39 IC1-40 IC1-41 IC1-42 IC1-43
-        IC1-44 IC1-45 IC1-46 IC1-47)
+      (pins J1-6 J1-11 J1-11@1 J1-11@2 J1-11@3 C1-2 C2-1 C3-2 D1-2 R5-2 U1-7 U2-2
+        J3-1 IC1-1 IC1-15 IC1-38 IC1-39 IC1-40 IC1-41 IC1-42 IC1-43 IC1-44 IC1-45
+        IC1-46 IC1-47 C4-2 C5-2 C6-2)
     )
     (net "Net-(C2-Pad2)"
       (pins C2-2 U1-5 Y1-3)
@@ -684,9 +750,6 @@
     )
     (net MCP_MOSI
       (pins U1-11 IC1-37)
-    )
-    (net "Net-(J2-Pad10)"
-      (pins J2-10)
     )
     (net CANH
       (pins JP1-1 U2-7 J3-10)
@@ -724,24 +787,33 @@
     (net "Net-(Y1-Pad4)"
       (pins Y1-4)
     )
-    (class kicad_default "" +3V3 CANH CANL GND MCP_CLK MCP_CS MCP_INT MCP_MISO
-      MCP_MOSI "Net-(C2-Pad2)" "Net-(C3-Pad1)" "Net-(IC1-Pad1)" "Net-(IC1-Pad14)"
-      "Net-(IC1-Pad15)" "Net-(IC1-Pad17)" "Net-(IC1-Pad18)" "Net-(IC1-Pad19)"
-      "Net-(IC1-Pad2)" "Net-(IC1-Pad20)" "Net-(IC1-Pad21)" "Net-(IC1-Pad22)"
-      "Net-(IC1-Pad25)" "Net-(IC1-Pad26)" "Net-(IC1-Pad27)" "Net-(IC1-Pad28)"
-      "Net-(IC1-Pad32)" "Net-(IC1-Pad38)" "Net-(IC1-Pad39)" "Net-(IC1-Pad4)"
-      "Net-(IC1-Pad40)" "Net-(IC1-Pad41)" "Net-(IC1-Pad42)" "Net-(IC1-Pad43)"
-      "Net-(IC1-Pad44)" "Net-(IC1-Pad45)" "Net-(IC1-Pad46)" "Net-(IC1-Pad47)"
-      "Net-(IC1-Pad5)" "Net-(J1-Pad1)" "Net-(J1-Pad10)" "Net-(J1-Pad8)" "Net-(J2-Pad1)"
-      "Net-(J2-Pad10)" "Net-(J2-Pad11)" "Net-(J2-Pad12)" "Net-(J2-Pad13)"
-      "Net-(J2-Pad14)" "Net-(J2-Pad15)" "Net-(J2-Pad2)" "Net-(J2-Pad3)" "Net-(J2-Pad4)"
-      "Net-(J2-Pad5)" "Net-(J2-Pad6)" "Net-(J2-Pad7)" "Net-(J2-Pad8)" "Net-(J2-Pad9)"
-      "Net-(J3-Pad1)" "Net-(J3-Pad10)" "Net-(J3-Pad11)" "Net-(J3-Pad12)" "Net-(J3-Pad13)"
-      "Net-(J3-Pad14)" "Net-(J3-Pad15)" "Net-(J3-Pad2)" "Net-(J3-Pad3)" "Net-(J3-Pad4)"
-      "Net-(J3-Pad5)" "Net-(J3-Pad6)" "Net-(J3-Pad7)" "Net-(J3-Pad8)" "Net-(J3-Pad9)"
-      "Net-(JP1-Pad2)" "Net-(R5-Pad1)" "Net-(U1-Pad1)" "Net-(U1-Pad2)" "Net-(U1-Pad3)"
-      "Net-(U1-Pad8)" "Net-(U1-Pad9)" "Net-(U2-Pad5)" "Net-(Y1-Pad2)" "Net-(Y1-Pad4)"
-      SD_CLK SD_CMD SD_DAT0 SD_DAT3
+    (net EN
+      (pins J2-2 IC1-3 C6-1 Q1-6 R7-2)
+    )
+    (net IO0
+      (pins J3-8 IC1-25 Q1-3)
+    )
+    (net RXD
+      (pins J3-4 IC1-34)
+    )
+    (net TXD
+      (pins J3-3 IC1-35)
+    )
+    (net RTS
+      (pins J2-4 Q1-1 Q1-5)
+    )
+    (net DTR
+      (pins J2-3 Q1-2 Q1-4)
+    )
+    (class kicad_default "" +3V3 CANH CANL DTR EN GND IO0 MCP_CLK MCP_CS MCP_INT
+      MCP_MISO MCP_MOSI "Net-(C2-Pad2)" "Net-(C3-Pad1)" "Net-(IC1-Pad14)"
+      "Net-(IC1-Pad17)" "Net-(IC1-Pad18)" "Net-(IC1-Pad19)" "Net-(IC1-Pad2)"
+      "Net-(IC1-Pad20)" "Net-(IC1-Pad21)" "Net-(IC1-Pad22)" "Net-(IC1-Pad26)"
+      "Net-(IC1-Pad27)" "Net-(IC1-Pad28)" "Net-(IC1-Pad32)" "Net-(IC1-Pad4)"
+      "Net-(IC1-Pad5)" "Net-(J1-Pad1)" "Net-(J1-Pad10)" "Net-(J1-Pad8)" "Net-(JP1-Pad2)"
+      "Net-(R5-Pad1)" "Net-(U1-Pad1)" "Net-(U1-Pad2)" "Net-(U1-Pad3)" "Net-(U1-Pad8)"
+      "Net-(U1-Pad9)" "Net-(U2-Pad5)" "Net-(Y1-Pad2)" "Net-(Y1-Pad4)" RTS
+      RXD SD_CLK SD_CMD SD_DAT0 SD_DAT3 TXD
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
@@ -750,9 +822,8 @@
         (clearance 200.1)
       )
     )
-    (class Dünn "Net-(IC1-Pad12)" "Net-(IC1-Pad29)" "Net-(IC1-Pad3)" "Net-(IC1-Pad33)"
-      "Net-(IC1-Pad34)" "Net-(IC1-Pad35)" "Net-(IC1-Pad36)" "Net-(IC1-Pad6)"
-      "Net-(IC1-Pad7)" "Net-(IC1-Pad8)" "Net-(IC1-Pad9)"
+    (class Dünn "Net-(IC1-Pad12)" "Net-(IC1-Pad29)" "Net-(IC1-Pad33)" "Net-(IC1-Pad36)"
+      "Net-(IC1-Pad6)" "Net-(IC1-Pad7)" "Net-(IC1-Pad8)" "Net-(IC1-Pad9)"
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
