@@ -139,26 +139,15 @@ F0 "SDCard" 50
 F1 "SDCard.sch" 50
 $EndSheet
 $Comp
-L Connector:Conn_01x10_Male J2
+L Connector:Conn_01x14_Male J2
 U 1 1 60ED5AC0
-P 1450 5350
-F 0 "J2" H 1050 5350 50  0000 C CNN
-F 1 "Conn_01x10_Male" H 1100 5250 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 1450 5350 50  0001 C CNN
-F 3 "~" H 1450 5350 50  0001 C CNN
-	1    1450 5350
+P 1450 5550
+F 0 "J2" H 1050 5550 50  0000 C CNN
+F 1 "Conn_01x14_Male" H 1100 5450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical" H 1450 5550 50  0001 C CNN
+F 3 "~" H 1450 5550 50  0001 C CNN
+	1    1450 5550
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x10_Male J3
-U 1 1 60ED67E8
-P 5400 5650
-F 0 "J3" H 5372 5532 50  0000 R CNN
-F 1 "Conn_01x10_Male" H 5372 5623 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 5400 5650 50  0001 C CNN
-F 3 "~" H 5400 5650 50  0001 C CNN
-	1    5400 5650
-	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	1650 5350 2600 5350
@@ -182,18 +171,18 @@ $EndComp
 $Comp
 L power:GND #PWR0119
 U 1 1 60EF68BA
-P 2000 7050
-F 0 "#PWR0119" H 2000 6800 50  0001 C CNN
-F 1 "GND" H 2005 6877 50  0000 C CNN
-F 2 "" H 2000 7050 50  0001 C CNN
-F 3 "" H 2000 7050 50  0001 C CNN
-	1    2000 7050
+P 2150 7050
+F 0 "#PWR0119" H 2150 6800 50  0001 C CNN
+F 1 "GND" H 2155 6877 50  0000 C CNN
+F 2 "" H 2150 7050 50  0001 C CNN
+F 3 "" H 2150 7050 50  0001 C CNN
+	1    2150 7050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2600 6250 2000 6250
+	2600 6250 2150 6250
 Wire Wire Line
-	2000 6250 2000 7050
+	2150 6250 2150 7050
 NoConn ~ 4100 5150
 NoConn ~ 4100 5550
 NoConn ~ 2600 6450
@@ -251,43 +240,23 @@ Wire Wire Line
 Wire Wire Line
 	4100 7050 4500 7050
 Connection ~ 4500 7050
-NoConn ~ 2600 5150
-NoConn ~ 2600 5250
-Text GLabel 5150 5150 0    50   Input ~ 0
+Text GLabel 5100 4650 0    50   Input ~ 0
 CANH
-Text GLabel 5150 5250 0    50   Input ~ 0
+Text GLabel 5100 4750 0    50   Input ~ 0
 CANL
-Wire Wire Line
-	4100 5650 5200 5650
-Wire Wire Line
-	4100 5250 4650 5250
-Wire Wire Line
-	4650 5250 4650 5550
-Wire Wire Line
-	4650 5550 5200 5550
-Wire Wire Line
-	4100 4950 4750 4950
-Wire Wire Line
-	4750 4950 4750 5450
-Wire Wire Line
-	4750 5450 5200 5450
 NoConn ~ 4100 5050
 $Comp
 L power:GND #PWR0118
 U 1 1 60F7017A
-P 5200 6050
-F 0 "#PWR0118" H 5200 5800 50  0001 C CNN
-F 1 "GND" H 5205 5877 50  0000 C CNN
-F 2 "" H 5200 6050 50  0001 C CNN
-F 3 "" H 5200 6050 50  0001 C CNN
-	1    5200 6050
+P 5200 6150
+F 0 "#PWR0118" H 5200 5900 50  0001 C CNN
+F 1 "GND" H 5205 5977 50  0000 C CNN
+F 2 "" H 5200 6150 50  0001 C CNN
+F 3 "" H 5200 6150 50  0001 C CNN
+	1    5200 6150
 	1    0    0    -1  
 $EndComp
-Text GLabel 2600 5050 0    50   Input ~ 0
-EN
-Text GLabel 1700 5050 2    50   Input ~ 0
-EN
-Text GLabel 5150 5350 0    50   Input ~ 0
+Text GLabel 5100 5150 0    50   Input ~ 0
 IO0
 Text GLabel 4100 4850 2    50   Input ~ 0
 IO0
@@ -340,48 +309,10 @@ F 3 "" H 1850 3850 50  0001 C CNN
 	1    1850 3850
 	1    0    0    -1  
 $EndComp
-$Comp
-L Transistor_BJT:UMH3N Q1
-U 1 1 60EB7CC3
-P 2950 3500
-F 0 "Q1" H 3240 3546 50  0000 L CNN
-F 1 "UMH3N" H 3240 3455 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 2955 3060 50  0001 C CNN
-F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/transistor/digital/emh3t2r-e.pdf" H 3100 3500 50  0001 C CNN
-	1    2950 3500
-	1    0    0    -1  
-$EndComp
-Text GLabel 3150 3300 1    50   Input ~ 0
-EN
-Text GLabel 2750 3500 0    50   Input ~ 0
-DTR
-Text GLabel 3150 3700 3    50   Input ~ 0
-RTS
-$Comp
-L Transistor_BJT:UMH3N Q1
-U 2 1 60EB8B73
-P 4000 3500
-F 0 "Q1" H 4290 3546 50  0000 L CNN
-F 1 "UMH3N" H 4290 3455 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 4005 3060 50  0001 C CNN
-F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/transistor/digital/emh3t2r-e.pdf" H 4150 3500 50  0001 C CNN
-	2    4000 3500
-	1    0    0    -1  
-$EndComp
-Text GLabel 4200 3300 1    50   Input ~ 0
-IO0
-Text GLabel 4200 3700 3    50   Input ~ 0
-DTR
-Text GLabel 3800 3500 0    50   Input ~ 0
-RTS
-Text GLabel 5150 5750 0    50   Input ~ 0
+Text GLabel 5100 5750 0    50   Input ~ 0
 RXD
-Text GLabel 5150 5850 0    50   Input ~ 0
+Text GLabel 5100 5850 0    50   Input ~ 0
 TXD
-Text GLabel 1700 5150 2    50   Input ~ 0
-DTR
-Text GLabel 1700 5250 2    50   Input ~ 0
-RTS
 $Comp
 L power:GND #PWR0122
 U 1 1 60EC5361
@@ -400,42 +331,12 @@ RXD
 Text GLabel 4100 5850 2    50   Input ~ 0
 TXD
 Wire Wire Line
-	2600 5950 2000 5950
-Wire Wire Line
-	2000 5950 2000 5750
-Wire Wire Line
-	2000 5750 1650 5750
-Wire Wire Line
-	4100 5950 5200 5950
-Wire Wire Line
-	1650 5850 1900 5850
-Wire Wire Line
-	1900 5850 1900 6150
-Wire Wire Line
-	1900 6150 2600 6150
-Wire Wire Line
 	1650 4950 1750 4950
-Wire Wire Line
-	1650 5050 1700 5050
-Wire Wire Line
-	1650 5150 1700 5150
-Wire Wire Line
-	1650 5250 1700 5250
-Wire Wire Line
-	5150 5150 5200 5150
-Wire Wire Line
-	5150 5250 5200 5250
-Wire Wire Line
-	5150 5350 5200 5350
-Wire Wire Line
-	5150 5750 5200 5750
-Wire Wire Line
-	5150 5850 5200 5850
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR0123
 U 1 1 60F07F5A
 P 1750 4850
-F 0 "#PWR?" H 1750 4700 50  0001 C CNN
+F 0 "#PWR0123" H 1750 4700 50  0001 C CNN
 F 1 "+3.3V" H 1765 5023 50  0000 C CNN
 F 2 "" H 1750 4850 50  0001 C CNN
 F 3 "" H 1750 4850 50  0001 C CNN
@@ -447,4 +348,92 @@ Wire Wire Line
 Connection ~ 1750 4950
 Wire Wire Line
 	1750 4950 2600 4950
+$Comp
+L Connector:Conn_01x16_Male J3
+U 1 1 60ED67E8
+P 5400 5450
+F 0 "J3" H 5372 5332 50  0000 R CNN
+F 1 "Conn_01x16_Male" H 5372 5423 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical" H 5400 5450 50  0001 C CNN
+F 3 "~" H 5400 5450 50  0001 C CNN
+	1    5400 5450
+	-1   0    0    1   
+$EndComp
+Text GLabel 5100 6050 0    50   Input ~ 0
+MCP_MOSI
+Text GLabel 5100 5550 0    50   Input ~ 0
+MCP_MISO
+Text GLabel 5100 5450 0    50   Input ~ 0
+MCP_CLK
+Wire Wire Line
+	5100 6050 5200 6050
+Wire Wire Line
+	4100 5950 5200 5950
+Wire Wire Line
+	5100 5850 5200 5850
+Wire Wire Line
+	5100 5750 5200 5750
+Wire Wire Line
+	4100 5650 5200 5650
+Wire Wire Line
+	4600 5250 4600 5350
+Wire Wire Line
+	4600 5350 5200 5350
+Wire Wire Line
+	4100 5250 4600 5250
+Wire Wire Line
+	4100 4950 4700 4950
+Wire Wire Line
+	4700 4950 4700 5250
+Wire Wire Line
+	4700 5250 5200 5250
+Wire Wire Line
+	5100 5150 5200 5150
+Text GLabel 5100 5050 0    50   Input ~ 0
+SD_DAT0
+Text GLabel 5100 4950 0    50   Input ~ 0
+SD_CMD
+Wire Wire Line
+	1650 5150 2600 5150
+Wire Wire Line
+	1650 5250 2600 5250
+Text GLabel 1750 5750 2    50   Input ~ 0
+MCP_CS
+Text GLabel 1750 5850 2    50   Input ~ 0
+MCP_INT
+Text GLabel 1750 6050 2    50   Input ~ 0
+SD_CLK
+Text GLabel 1750 6250 2    50   Input ~ 0
+SD_DAT3
+Wire Wire Line
+	1650 5750 1750 5750
+Wire Wire Line
+	1650 5850 1750 5850
+Wire Wire Line
+	1650 5950 2600 5950
+Wire Wire Line
+	1650 6050 1750 6050
+Wire Wire Line
+	1650 6250 1750 6250
+Wire Wire Line
+	1650 6150 2600 6150
+Wire Wire Line
+	5100 4650 5200 4650
+Wire Wire Line
+	5100 4750 5200 4750
+Wire Wire Line
+	5100 4950 5200 4950
+Wire Wire Line
+	5100 5050 5200 5050
+Wire Wire Line
+	5100 5450 5200 5450
+Wire Wire Line
+	5100 5550 5200 5550
+Text GLabel 2600 5050 0    50   Input ~ 0
+EN
+Text GLabel 1750 5050 2    50   Input ~ 0
+EN
+Wire Wire Line
+	1650 5050 1750 5050
+NoConn ~ 5200 4850
 $EndSCHEMATC
