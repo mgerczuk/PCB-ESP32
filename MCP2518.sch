@@ -121,7 +121,7 @@ AR Path="/60EBEE3D" Ref="R?"  Part="1"
 AR Path="/60EA716F/60EBEE3D" Ref="R6"  Part="1" 
 F 0 "R6" H 7609 2446 50  0000 L CNN
 F 1 "120" H 7609 2355 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" H 7550 2400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7550 2400 50  0001 C CNN
 F 3 "~" H 7550 2400 50  0001 C CNN
 	1    7550 2400
 	1    0    0    -1  
