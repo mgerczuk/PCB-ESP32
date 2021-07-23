@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP D5V0L4B5S-7
+D TVS,Diode,Array,ESD,Sup,+/-30KV,SOT353 DiodesZetex D5V0L4B5S-7, Bi-Directional TVS Diode Array Array, 14V, 84W, 5-Pin SOT-353
+F https://componentsearchengine.com/Datasheets/1/D5V0L4B5S-7.pdf
+$ENDCMP
+#
+#End Doc Library

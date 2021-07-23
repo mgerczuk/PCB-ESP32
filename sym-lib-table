@@ -1,3 +1,5 @@
 (sym_lib_table
   (lib (name ESP32_Bus)(type Legacy)(uri ${KIPRJMOD}/esp32bus/ESP32_Bus.lib)(options "")(descr ""))
+  (lib (name mcp2518)(type Legacy)(uri ${KIPRJMOD}/mcp2518/mcp2518.lib)(options "")(descr ""))
+  (lib (name sdcard)(type Legacy)(uri ${KIPRJMOD}/sdcard/sdcard.lib)(options "")(descr ""))
 )

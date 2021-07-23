@@ -130,13 +130,13 @@ $Sheet
 S 750  850  2450 1200
 U 60EA716F
 F0 "MCP2518" 50
-F1 "MCP2518.sch" 50
+F1 "mcp2518/MCP2518.sch" 50
 $EndSheet
 $Sheet
 S 700  2350 2500 1200
 U 60EC0178
 F0 "SDCard" 50
-F1 "SDCard.sch" 50
+F1 "sdcard/SDCard.sch" 50
 $EndSheet
 $Comp
 L power:GND #PWR0117

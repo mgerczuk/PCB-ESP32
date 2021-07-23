@@ -30,14 +30,14 @@ Wire Wire Line
 Wire Wire Line
 	2500 2450 3600 2450
 $Comp
-L SamacSys_Parts:D5V0L4B5S-7 D?
+L sdcard:D5V0L4B5S-7 D?
 U 1 1 60ECAE03
 P 2450 3600
 AR Path="/60ECAE03" Ref="D?"  Part="1" 
 AR Path="/60EC0178/60ECAE03" Ref="D1"  Part="1" 
 F 0 "D1" H 3300 3865 50  0000 C CNN
 F 1 "D5V0L4B5S-7" H 3300 3774 50  0000 C CNN
-F 2 "SamacSys_Parts:SOT65P210X110-5N" H 4000 3700 50  0001 L CNN
+F 2 "sdcard:SOT65P210X110-5N" H 4000 3700 50  0001 L CNN
 F 3 "https://componentsearchengine.com/Datasheets/1/D5V0L4B5S-7.pdf" H 4000 3600 50  0001 L CNN
 F 4 "TVS,Diode,Array,ESD,Sup,+/-30KV,SOT353 DiodesZetex D5V0L4B5S-7, Bi-Directional TVS Diode Array Array, 14V, 84W, 5-Pin SOT-353" H 4000 3500 50  0001 L CNN "Description"
 F 5 "1.1" H 4000 3400 50  0001 L CNN "Height"
@@ -201,7 +201,7 @@ AR Path="/60ECAE52" Ref="J?"  Part="1"
 AR Path="/60EC0178/60ECAE52" Ref="J1"  Part="1" 
 F 0 "J1" H 5000 3067 50  0000 C CNN
 F 1 "Micro_SD_Card_Det" H 5000 2976 50  0000 C CNN
-F 2 "esp32:SD_CTF-11081-P" H 7100 2950 50  0001 C CNN
+F 2 "sdcard:SD_CTF-11081-P" H 7100 2950 50  0001 C CNN
 F 3 "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1" H 5050 2350 50  0001 C CNN
 	1    5050 2250
 	1    0    0    -1  

@@ -1,0 +1,13 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MCP2518FDT-H_SL
+D CAN Interface IC Stand-alone Low Power CAN FD Controller w/SPI Interface Grade0
+F http://ww1.microchip.com/downloads/en/DeviceDoc/MCP2518FD-Data-Sheet-20006027A.pdf
+$ENDCMP
+#
+$CMP XRCGB40M000F4M02R0
+D Crystal 40MHz +/-45ppm (Tol) +/-40ppm (Stability) 10pF 100Ohm 4-Pin SMD T/R
+F https://www.murata.com/products/productdata/8801080279070/SPEC-XRCGB40M000F4M02R0.pdf?1517925609000
+$ENDCMP
+#
+#End Doc Library
