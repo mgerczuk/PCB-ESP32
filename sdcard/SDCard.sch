@@ -29,32 +29,13 @@ Wire Wire Line
 	2500 2050 3100 2050
 Wire Wire Line
 	2500 2450 3600 2450
-$Comp
-L sdcard:D5V0L4B5S-7 D?
-U 1 1 60ECAE03
-P 2450 3600
-AR Path="/60ECAE03" Ref="D?"  Part="1" 
-AR Path="/60EC0178/60ECAE03" Ref="D1"  Part="1" 
-F 0 "D1" H 3300 3865 50  0000 C CNN
-F 1 "D5V0L4B5S-7" H 3300 3774 50  0000 C CNN
-F 2 "sdcard:SOT65P210X110-5N" H 4000 3700 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/D5V0L4B5S-7.pdf" H 4000 3600 50  0001 L CNN
-F 4 "TVS,Diode,Array,ESD,Sup,+/-30KV,SOT353 DiodesZetex D5V0L4B5S-7, Bi-Directional TVS Diode Array Array, 14V, 84W, 5-Pin SOT-353" H 4000 3500 50  0001 L CNN "Description"
-F 5 "1.1" H 4000 3400 50  0001 L CNN "Height"
-F 6 "621-D5V0L4B5S-7" H 4000 3300 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=621-D5V0L4B5S-7" H 4000 3200 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Diodes Inc." H 4000 3100 50  0001 L CNN "Manufacturer_Name"
-F 9 "D5V0L4B5S-7" H 4000 3000 50  0001 L CNN "Manufacturer_Part_Number"
-	1    2450 3600
-	1    0    0    -1  
-$EndComp
-Text GLabel 4150 3700 2    50   Input ~ 0
+Text GLabel 4400 4350 2    50   Input ~ 0
 SD_CMD
-Text GLabel 2450 3600 0    50   Input ~ 0
+Text GLabel 3400 4150 0    50   Input ~ 0
 SD_CLK
-Text GLabel 2450 3800 0    50   Input ~ 0
+Text GLabel 3400 4350 0    50   Input ~ 0
 SD_DAT0
-Text GLabel 4150 3600 2    50   Input ~ 0
+Text GLabel 4400 4150 2    50   Input ~ 0
 SD_DAT3
 $Comp
 L power:+3.3V #PWR?
@@ -167,18 +148,16 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 60ECAE43
-P 1950 3700
+P 3900 4750
 AR Path="/60ECAE43" Ref="#PWR?"  Part="1" 
 AR Path="/60EC0178/60ECAE43" Ref="#PWR0103"  Part="1" 
-F 0 "#PWR0103" H 1950 3450 50  0001 C CNN
-F 1 "GND" H 1955 3527 50  0000 C CNN
-F 2 "" H 1950 3700 50  0001 C CNN
-F 3 "" H 1950 3700 50  0001 C CNN
-	1    1950 3700
+F 0 "#PWR0103" H 3900 4500 50  0001 C CNN
+F 1 "GND" H 3905 4577 50  0000 C CNN
+F 2 "" H 3900 4750 50  0001 C CNN
+F 3 "" H 3900 4750 50  0001 C CNN
+	1    3900 4750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1950 3700 2450 3700
 Wire Wire Line
 	3350 2250 4150 2250
 Connection ~ 3350 2250
@@ -215,4 +194,16 @@ Wire Wire Line
 Connection ~ 3900 3000
 Wire Wire Line
 	5850 3000 3900 3000
+$Comp
+L Power_Protection:SRV05-4 U3
+U 1 1 61022D12
+P 3900 4250
+F 0 "U3" H 3900 4931 50  0000 C CNN
+F 1 "SRV05-4" H 3900 4840 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 4600 3800 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub/Collateral/SRV05-4-D.PDF" H 3900 4250 50  0001 C CNN
+	1    3900 4250
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3900 3750
 $EndSCHEMATC
