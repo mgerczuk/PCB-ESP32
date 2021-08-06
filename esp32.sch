@@ -121,7 +121,7 @@ U 1 1 60E74937
 P 2150 5850
 F 0 "C1" H 2268 5896 50  0000 L CNN
 F 1 "10uF" H 2268 5805 50  0000 L CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B" H 2188 5700 50  0001 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_Pad1.50x2.35mm_HandSolder" H 2188 5700 50  0001 C CNN
 F 3 "~" H 2150 5850 50  0001 C CNN
 	1    2150 5850
 	1    0    0    -1  
@@ -247,7 +247,7 @@ U 1 1 60EB553E
 P 1350 4300
 F 0 "R7" H 1420 4346 50  0000 L CNN
 F 1 "10k" H 1420 4255 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 1280 4300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 1280 4300 50  0001 C CNN
 F 3 "~" H 1350 4300 50  0001 C CNN
 	1    1350 4300
 	1    0    0    -1  
@@ -258,7 +258,7 @@ U 1 1 60EB5A92
 P 1350 4600
 F 0 "C6" H 1465 4646 50  0000 L CNN
 F 1 "100nF" H 1465 4555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 1388 4450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1388 4450 50  0001 C CNN
 F 3 "~" H 1350 4600 50  0001 C CNN
 	1    1350 4600
 	1    0    0    -1  
@@ -431,18 +431,6 @@ Wire Wire Line
 Wire Wire Line
 	5400 2250 6500 2250
 Wire Wire Line
-	7750 3450 8200 3450
-Wire Wire Line
-	8200 3450 8200 1950
-Wire Wire Line
-	8200 1950 7500 1950
-Wire Wire Line
-	7750 3750 8250 3750
-Wire Wire Line
-	8250 3750 8250 1850
-Wire Wire Line
-	8250 1850 7500 1850
-Wire Wire Line
 	7750 4150 8300 4150
 Wire Wire Line
 	8300 4150 8300 1550
@@ -476,4 +464,54 @@ Wire Wire Line
 	7500 2550 7600 2550
 Wire Wire Line
 	7500 1050 7600 1050
+Text GLabel 3100 4150 0    50   Input ~ 0
+TXCAN
+Text GLabel 3100 4400 0    50   Input ~ 0
+RXCAN
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 610C83D9
+P 3400 4150
+F 0 "JP2" H 3400 4355 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 3400 4264 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3400 4150 50  0001 C CNN
+F 3 "~" H 3400 4150 50  0001 C CNN
+	1    3400 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP3
+U 1 1 610C8E41
+P 3400 4400
+F 0 "JP3" H 3400 4605 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 3400 4514 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3400 4400 50  0001 C CNN
+F 3 "~" H 3400 4400 50  0001 C CNN
+	1    3400 4400
+	1    0    0    -1  
+$EndComp
+Text GLabel 7600 1950 2    50   Input ~ 0
+IO4
+Text GLabel 7600 1850 2    50   Input ~ 0
+IO5
+Text GLabel 7750 3450 2    50   Input ~ 0
+IO4
+Text GLabel 7750 3750 2    50   Input ~ 0
+IO5
+Text GLabel 3800 4400 2    50   Input ~ 0
+IO4
+Text GLabel 3800 4150 2    50   Input ~ 0
+IO5
+Wire Wire Line
+	7500 1850 7600 1850
+Wire Wire Line
+	7500 1950 7600 1950
+Wire Wire Line
+	3100 4150 3250 4150
+Wire Wire Line
+	3100 4400 3250 4400
+Wire Wire Line
+	3550 4150 3800 4150
+Wire Wire Line
+	3550 4400 3800 4400
 $EndSCHEMATC

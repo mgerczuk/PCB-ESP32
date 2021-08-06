@@ -39,25 +39,6 @@ F 3 "" H 5600 3900 50  0001 C CNN
 	1    5600 3900
 	1    0    0    -1  
 $EndComp
-$Comp
-L mcp2518:MCP2518FDT-H_SL U?
-U 1 1 60EBEE1D
-P 5600 3300
-AR Path="/60EBEE1D" Ref="U?"  Part="1" 
-AR Path="/60EA716F/60EBEE1D" Ref="U1"  Part="1" 
-F 0 "U1" H 6600 3565 50  0000 C CNN
-F 1 "MCP2518FDT-H_SL" H 6600 3474 50  0000 C CNN
-F 2 "mcp2518:SOIC127P600X175-14N" H 7450 3400 50  0001 L CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MCP2518FD-Data-Sheet-20006027A.pdf" H 7450 3300 50  0001 L CNN
-F 4 "CAN Interface IC Stand-alone Low Power CAN FD Controller w/SPI Interface Grade0" H 7450 3200 50  0001 L CNN "Description"
-F 5 "1.75" H 7450 3100 50  0001 L CNN "Height"
-F 6 "579-MCP2518FDT-H/SL" H 7450 3000 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MCP2518FDT-H-SL/?qs=T3oQrply3y91PFfynJbKYg%3D%3D" H 7450 2900 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Microchip" H 7450 2800 50  0001 L CNN "Manufacturer_Name"
-F 9 "MCP2518FDT-H/SL" H 7450 2700 50  0001 L CNN "Manufacturer_Part_Number"
-	1    5600 3300
-	1    0    0    -1  
-$EndComp
 NoConn ~ 5600 3500
 $Comp
 L Device:C_Small C?
@@ -67,7 +48,7 @@ AR Path="/60EBEE24" Ref="C?"  Part="1"
 AR Path="/60EA716F/60EBEE24" Ref="C4"  Part="1" 
 F 0 "C4" H 6292 1696 50  0000 L CNN
 F 1 "0.1uF" H 6292 1605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6200 1650 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6200 1650 50  0001 C CNN
 F 3 "~" H 6200 1650 50  0001 C CNN
 	1    6200 1650
 	1    0    0    -1  
@@ -93,7 +74,7 @@ AR Path="/60EBEE30" Ref="C?"  Part="1"
 AR Path="/60EA716F/60EBEE30" Ref="C5"  Part="1" 
 F 0 "C5" H 7892 3046 50  0000 L CNN
 F 1 "0.1uF" H 7892 2955 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 7800 3000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7800 3000 50  0001 C CNN
 F 3 "~" H 7800 3000 50  0001 C CNN
 	1    7800 3000
 	1    0    0    -1  
@@ -121,7 +102,7 @@ AR Path="/60EBEE3D" Ref="R?"  Part="1"
 AR Path="/60EA716F/60EBEE3D" Ref="R6"  Part="1" 
 F 0 "R6" H 7609 2446 50  0000 L CNN
 F 1 "120" H 7609 2355 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7550 2400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 7550 2400 50  0001 C CNN
 F 3 "~" H 7550 2400 50  0001 C CNN
 	1    7550 2400
 	1    0    0    -1  
@@ -139,7 +120,7 @@ AR Path="/60EBEE47" Ref="R?"  Part="1"
 AR Path="/60EA716F/60EBEE47" Ref="R5"  Part="1" 
 F 0 "R5" H 6109 2546 50  0000 L CNN
 F 1 "5k" H 6109 2455 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 6050 2500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 6050 2500 50  0001 C CNN
 F 3 "~" H 6050 2500 50  0001 C CNN
 	1    6050 2500
 	1    0    0    -1  
@@ -209,8 +190,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd230.pdf" H 6500 2600 50  0001 C CNN
 	1    6600 2200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5600 3400 5500 3400
 NoConn ~ 6200 2300
 Wire Wire Line
 	6050 2400 6200 2400
@@ -231,14 +210,6 @@ Wire Wire Line
 	7250 2200 7250 2000
 Wire Wire Line
 	8650 3100 8850 3100
-Wire Wire Line
-	5500 3400 5500 2200
-Wire Wire Line
-	5500 2200 6200 2200
-Wire Wire Line
-	5600 3300 5600 2100
-Wire Wire Line
-	5600 2100 6200 2100
 Wire Wire Line
 	8650 2500 8650 3100
 Wire Wire Line
@@ -280,7 +251,7 @@ AR Path="/60EBEE8E" Ref="C?"  Part="1"
 AR Path="/60EA716F/60EBEE8E" Ref="C2"  Part="1" 
 F 0 "C2" H 4915 3596 50  0000 L CNN
 F 1 "22pF" H 4915 3505 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4838 3400 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4838 3400 50  0001 C CNN
 F 3 "~" H 4800 3550 50  0001 C CNN
 	1    4800 3550
 	1    0    0    -1  
@@ -309,7 +280,7 @@ AR Path="/60EBEE9C" Ref="C?"  Part="1"
 AR Path="/60EA716F/60EBEE9C" Ref="C3"  Part="1" 
 F 0 "C3" H 4915 3996 50  0000 L CNN
 F 1 "22pF" H 4915 3905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4838 3800 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4838 3800 50  0001 C CNN
 F 3 "~" H 4800 3950 50  0001 C CNN
 	1    4800 3950
 	1    0    0    -1  
@@ -356,4 +327,39 @@ Text GLabel 7600 3700 2    50   Input ~ 0
 MCP_CLK
 Text GLabel 5600 3600 0    50   Input ~ 0
 MCP_INT
+Text GLabel 5500 3300 0    50   Input ~ 0
+TXCAN
+Text GLabel 6100 2100 0    50   Input ~ 0
+TXCAN
+Wire Wire Line
+	6100 2100 6200 2100
+Wire Wire Line
+	5500 3300 5600 3300
+$Comp
+L mcp2518:MCP2518FDT-H_SL U?
+U 1 1 60EBEE1D
+P 5600 3300
+AR Path="/60EBEE1D" Ref="U?"  Part="1" 
+AR Path="/60EA716F/60EBEE1D" Ref="U1"  Part="1" 
+F 0 "U1" H 6600 3565 50  0000 C CNN
+F 1 "MCP2518FDT-H_SL" H 6600 3474 50  0000 C CNN
+F 2 "mcp2518:SOIC127P600X175-14N" H 7450 3400 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MCP2518FD-Data-Sheet-20006027A.pdf" H 7450 3300 50  0001 L CNN
+F 4 "CAN Interface IC Stand-alone Low Power CAN FD Controller w/SPI Interface Grade0" H 7450 3200 50  0001 L CNN "Description"
+F 5 "1.75" H 7450 3100 50  0001 L CNN "Height"
+F 6 "579-MCP2518FDT-H/SL" H 7450 3000 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MCP2518FDT-H-SL/?qs=T3oQrply3y91PFfynJbKYg%3D%3D" H 7450 2900 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Microchip" H 7450 2800 50  0001 L CNN "Manufacturer_Name"
+F 9 "MCP2518FDT-H/SL" H 7450 2700 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5600 3300
+	1    0    0    -1  
+$EndComp
+Text GLabel 5500 3400 0    50   Input ~ 0
+RXCAN
+Text GLabel 6100 2200 0    50   Input ~ 0
+RXCAN
+Wire Wire Line
+	6100 2200 6200 2200
+Wire Wire Line
+	5500 3400 5600 3400
 $EndSCHEMATC
