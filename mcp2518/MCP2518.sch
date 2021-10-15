@@ -113,32 +113,6 @@ Wire Wire Line
 	7600 2900 7800 2900
 Connection ~ 7600 2900
 $Comp
-L Device:R_Small R?
-U 1 1 60EBEE47
-P 6050 2500
-AR Path="/60EBEE47" Ref="R?"  Part="1" 
-AR Path="/60EA716F/60EBEE47" Ref="R5"  Part="1" 
-F 0 "R5" H 6109 2546 50  0000 L CNN
-F 1 "5k" H 6109 2455 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 6050 2500 50  0001 C CNN
-F 3 "~" H 6050 2500 50  0001 C CNN
-	1    6050 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 60EBEE4D
-P 6050 2600
-AR Path="/60EBEE4D" Ref="#PWR?"  Part="1" 
-AR Path="/60EA716F/60EBEE4D" Ref="#PWR0110"  Part="1" 
-F 0 "#PWR0110" H 6050 2350 50  0001 C CNN
-F 1 "GND" H 6055 2427 50  0000 C CNN
-F 2 "" H 6050 2600 50  0001 C CNN
-F 3 "" H 6050 2600 50  0001 C CNN
-	1    6050 2600
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 60EBEE53
 P 4800 4100
@@ -192,7 +166,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd230.pdf" H 6500 2600 50  0001 C CNN
 $EndComp
 NoConn ~ 6200 2300
 Wire Wire Line
-	6050 2400 6200 2400
+	6100 2400 6200 2400
 Wire Wire Line
 	6200 1550 6600 1550
 Wire Wire Line
@@ -201,48 +175,17 @@ Connection ~ 6600 1550
 Wire Wire Line
 	7000 2300 7250 2300
 Wire Wire Line
-	7250 2300 7250 2500
-Wire Wire Line
-	8750 3000 8850 3000
+	7250 2300 7250 2550
 Wire Wire Line
 	7000 2200 7250 2200
 Wire Wire Line
-	7250 2200 7250 2000
+	7250 2200 7250 1950
 Wire Wire Line
-	8650 3100 8850 3100
+	4550 3700 4800 3700
 Wire Wire Line
-	8650 2500 8650 3100
+	4550 3950 4550 3800
 Wire Wire Line
-	8750 2000 8750 3000
-Wire Wire Line
-	4450 3700 4800 3700
-$Comp
-L mcp2518:XRCGB40M000F4M02R0 Y?
-U 1 1 60EBEE84
-P 1950 3700
-AR Path="/60EBEE84" Ref="Y?"  Part="1" 
-AR Path="/60EA716F/60EBEE84" Ref="Y1"  Part="1" 
-F 0 "Y1" H 3200 3965 50  0000 C CNN
-F 1 "XRCGB40M000F4M02R0" H 3200 3874 50  0000 C CNN
-F 2 "mcp2518:XRCGB40M000F4M02R0" H 4300 3800 50  0001 L CNN
-F 3 "https://www.murata.com/products/productdata/8801080279070/SPEC-XRCGB40M000F4M02R0.pdf?1517925609000" H 4300 3700 50  0001 L CNN
-F 4 "Crystal 40MHz +/-45ppm (Tol) +/-40ppm (Stability) 10pF 100Ohm 4-Pin SMD T/R" H 4300 3600 50  0001 L CNN "Description"
-F 5 "0.7" H 4300 3500 50  0001 L CNN "Height"
-F 6 "81-XRCGB40M000F4M02R" H 4300 3400 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Murata-Electronics/XRCGB40M000F4M02R0?qs=rrS6PyfT74fAOGFgWWmGFg%3D%3D" H 4300 3300 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Murata Electronics" H 4300 3200 50  0001 L CNN "Manufacturer_Name"
-F 9 "XRCGB40M000F4M02R0" H 4300 3100 50  0001 L CNN "Manufacturer_Part_Number"
-	1    1950 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1950 3800 1950 4150
-Wire Wire Line
-	1950 4150 4600 4150
-Wire Wire Line
-	4600 4150 4600 3800
-Wire Wire Line
-	4600 3800 4800 3800
+	4550 3800 4800 3800
 $Comp
 L Device:C C?
 U 1 1 60EBEE8E
@@ -288,34 +231,9 @@ $EndComp
 Connection ~ 4800 3800
 Wire Wire Line
 	4800 3800 5600 3800
-NoConn ~ 4450 3800
-NoConn ~ 1950 3700
-Wire Wire Line
-	7250 2500 7550 2500
-Wire Wire Line
-	7250 2000 7550 2000
-Connection ~ 7550 2500
-Wire Wire Line
-	7550 2500 8650 2500
-$Comp
-L Jumper:SolderJumper_2_Open JP?
-U 1 1 60EBEEAA
-P 7550 2150
-AR Path="/60EBEEAA" Ref="JP?"  Part="1" 
-AR Path="/60EA716F/60EBEEAA" Ref="JP1"  Part="1" 
-F 0 "JP1" V 7504 2218 50  0000 L CNN
-F 1 "CAN 120" V 7595 2218 50  0000 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 7550 2150 50  0001 C CNN
-F 3 "~" H 7550 2150 50  0001 C CNN
-	1    7550 2150
-	0    1    1    0   
-$EndComp
-Connection ~ 7550 2000
-Wire Wire Line
-	7550 2000 8750 2000
-Text GLabel 8850 3000 2    50   Input ~ 0
+Text GLabel 7850 1950 2    50   Input ~ 0
 CANH
-Text GLabel 8850 3100 2    50   Input ~ 0
+Text GLabel 7850 2550 2    50   Input ~ 0
 CANL
 Text GLabel 7600 3400 2    50   Input ~ 0
 MCP_CS
@@ -362,4 +280,74 @@ Wire Wire Line
 	6100 2200 6200 2200
 Wire Wire Line
 	5500 3400 5600 3400
+Text GLabel 6100 2400 0    50   Input ~ 0
+SN65_RS
+Wire Wire Line
+	7250 2550 7550 2550
+Wire Wire Line
+	7550 2500 7550 2550
+Connection ~ 7550 2550
+Wire Wire Line
+	7550 2550 7850 2550
+$Comp
+L Device:Crystal_GND24 Y1
+U 1 1 616A00D8
+P 4000 3750
+F 0 "Y1" V 4046 3506 50  0000 R CNN
+F 1 "40MHz" V 3955 3506 50  0000 R CNN
+F 2 "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 4000 3750 50  0001 C CNN
+F 3 "~" H 4000 3750 50  0001 C CNN
+	1    4000 3750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 3900 4000 3950
+Wire Wire Line
+	4000 3950 4550 3950
+Wire Wire Line
+	4550 3700 4550 3550
+Wire Wire Line
+	4550 3550 4000 3550
+Wire Wire Line
+	4000 3550 4000 3600
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 616B0F56
+P 7550 2100
+F 0 "JP1" V 7504 2168 50  0000 L CNN
+F 1 "CAN 120" V 7595 2168 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 7550 2100 50  0001 C CNN
+F 3 "~" H 7550 2100 50  0001 C CNN
+	1    7550 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7250 1950 7550 1950
+Connection ~ 7550 1950
+Wire Wire Line
+	7550 1950 7850 1950
+Wire Wire Line
+	7550 2300 7550 2250
+$Comp
+L power:GND #PWR?
+U 1 1 616B74AE
+P 4000 4100
+AR Path="/616B74AE" Ref="#PWR?"  Part="1" 
+AR Path="/60EA716F/616B74AE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4000 3850 50  0001 C CNN
+F 1 "GND" H 4005 3927 50  0000 C CNN
+F 2 "" H 4000 4100 50  0001 C CNN
+F 3 "" H 4000 4100 50  0001 C CNN
+	1    4000 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3750 3800 4100
+Wire Wire Line
+	3800 4100 4000 4100
+Wire Wire Line
+	4200 3750 4200 4100
+Wire Wire Line
+	4200 4100 4000 4100
+Connection ~ 4000 4100
 $EndSCHEMATC

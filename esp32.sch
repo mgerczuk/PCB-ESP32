@@ -419,12 +419,6 @@ Wire Wire Line
 Wire Wire Line
 	5500 1750 6500 1750
 Wire Wire Line
-	6250 4450 5450 4450
-Wire Wire Line
-	5450 4450 5450 2050
-Wire Wire Line
-	5450 2050 6500 2050
-Wire Wire Line
 	6250 4650 5400 4650
 Wire Wire Line
 	5400 4650 5400 2250
@@ -514,4 +508,10 @@ Wire Wire Line
 	3550 4150 3800 4150
 Wire Wire Line
 	3550 4400 3800 4400
+Text GLabel 6250 4450 0    50   Input ~ 0
+SN65_RS
+Text GLabel 6350 2050 0    50   Input ~ 0
+SN65_RS
+Wire Wire Line
+	6350 2050 6500 2050
 $EndSCHEMATC
